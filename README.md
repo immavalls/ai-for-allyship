@@ -53,6 +53,8 @@ Example prompt:
 
 See the [sample report format](examples/event-review.md).
 
+**Output format:** ask for `console` (default), `markdown` (saves a `.md` file) or `pdf` (saves a PDF if your environment has a conversion tool; otherwise you get the Markdown file and a note). Example: *"Review this event and give me the result as a PDF."* PDF output depends on tools available where the assistant runs and is not yet tested across surfaces.
+
 ## What this is (and isn't)
 
 - **Is:** a starter kit for prompting, human review, and constructive feedback in community operations.

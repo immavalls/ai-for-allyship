@@ -31,6 +31,18 @@ A user asks to review a meetup, KCD, conference, workshop, or event page for inc
 - **Questions for organizers:** unknowns that cannot be resolved from public information.
 - **Limitations:** only publicly reviewed materials; independent experimental project; no CHAOSS affiliation or badge.
 
+## Output options
+
+The user can ask for the format. If they don't say, use **console** and mention the other options in one line at the end.
+
+- **Console (default):** print the report in the conversation, following the format above.
+- **Markdown:** write the same report to a `.md` file, named `event-review-<event-slug>-<YYYY-MM-DD>.md`, in the current directory or a location the user names. Tell the user the path.
+- **PDF:** write the Markdown report first, then convert it to PDF with whatever tool is available in the environment (for example `pandoc`, or a Python PDF library). Keep the source links clickable and keep the "not a CHAOSS assessment" notice and the page footer. If no tool is available, or the conversion fails, say so, keep the Markdown file, and don't claim a PDF exists. Check that the file was created and that its text extracts correctly before reporting success.
+
+Whatever the format, the content rules are identical: same sections, same status vocabulary, no score or badge, and the limitations section stays in. Disclose any conflict of interest the user mentions (for example, being an organizer of the event) in the report itself.
+
+Saved reports are about real events and people. Write them where the user asks, and don't commit, publish or post them anywhere unless they ask you to.
+
 ## Background
 
 The categories are inspired by the published [CHAOSS DEI Event Badging v4.0](https://www.chaoss.community/diversity-and-inclusion-badging/) criteria, which cover event demographics, inclusive experience at event, code of conduct, diversity access tickets, family friendliness, event accessibility, event location inclusivity, public health and safety, and (for virtual events) time inclusion. The official badge process uses human reviewers; do not reproduce their badge decisions.
