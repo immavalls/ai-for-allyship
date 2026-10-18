@@ -53,7 +53,15 @@ Example prompt:
 
 See the [sample report format](examples/event-review.md).
 
-**Output format:** ask for `console` (default), `markdown` (saves a `.md` file) or `pdf` (saves a PDF if your environment has a conversion tool; otherwise you get the Markdown file and a note). Example: *"Review this event and give me the result as a PDF."* PDF output depends on tools available where the assistant runs and is not yet tested across surfaces.
+**Output format:** add `md` or `pdf` after the URL; the default is `console`.
+
+```
+/event-review https://example.org/event          # prints in the conversation
+/event-review https://example.org/event md       # saves a Markdown file
+/event-review https://example.org/event pdf      # saves a PDF if a converter is available
+```
+
+If no PDF converter is available, you get the Markdown file and a note. PDF output depends on tools where the assistant runs and is not yet tested across surfaces.
 
 ## What this is (and isn't)
 
