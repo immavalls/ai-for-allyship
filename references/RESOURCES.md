@@ -14,7 +14,7 @@ This collection is a practical starting point, not an exhaustive literature revi
 - [CHAOSS DEI Event Badging, version 4.0](https://www.chaoss.community/diversity-and-inclusion-badging/) — publicly documented categories and human peer-review program for open-source events. Our event review is **independent**, with no scoring or official badging.
 - [OpenNews Speaker Rider](https://opennews.org/projects/speaker-rider/) — concrete expectations speakers can bring to event conversations.
 - [Creating my inclusive speaking rider — Imma Valls](https://eyeveebee.dev/creating-my-inclusive-speaking-rider) — a speaker-led approach to stating inclusion expectations.
-- [CNCF Code of Conduct](https://www.cncf.io/community/code-of-conduct/) — useful example; **do not presume** a particular event has adopted it without verification.
+- [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md) — useful example; **do not presume** a particular event has adopted it without verification.
 
 ## Talk and project context
 
