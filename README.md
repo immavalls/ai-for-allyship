@@ -6,7 +6,20 @@ AI can help organize meetups, conferences, and open-source communities, but it c
 
 Inspired by real experiences organizing cloud-native events: AI-generated invitations that emphasize exclusivity and status; technical workshop illustrations reinforcing gender stereotypes; homogenous default AI-generated meetup images; and event descriptions missing accessible Code of Conduct information.
 
-This project was introduced in [AI for Allyship and Inclusion: Supporting CNCF Communities with Context-Aware AI](https://eyeveebee.dev/ai-for-allyship-and-inclusion-supporting-cncf-communities-with-context-aware-ai) at KCD UK 2026.
+This project accompanies the KCD UK 2026 talk (19 October 2026) [AI for Allyship and Inclusion: Supporting CNCF Communities with Context-Aware AI](https://eyeveebee.dev/ai-for-allyship-and-inclusion-supporting-cncf-communities-with-context-aware-ai). Slides: <https://bit.ly/ai-for-allyship-2026>.
+
+> **AI won't make our communities inclusive. People will. But we can build AI tools that help us become better allies.**
+
+## Why this exists
+
+The project grew out of things I (Imma) saw while organizing and attending technology communities:
+
+- **Exclusionary wording.** A community's AI-generated promotional text called it an "exclusive community of top-tier engineers" and used phrases like "highly selective" and "high-signal and low-noise", while organizers were puzzled by low female attendance. One phrase doesn't prove discrimination, but the AI never challenged the framing, and the community had no Code of Conduct.
+- **Stereotyped imagery.** In workshop material for a conference, developers were depicted as young men and operators as young women, everyone white. Nobody noticed at first, which shows bias can be normalized by both AI generation and human review.
+- **Homogeneous defaults.** Default prompts for a Cloud Native Barcelona meetup image produced mostly male, similar-looking groups. Explicitly asking for variety in gender, age, and skin tone helped a lot, but it should not depend on organizers remembering every time.
+- **Missing Code of Conduct.** When drafting meetup announcements, AI doesn't ask whether a Code of Conduct exists or link it.
+
+The aim isn't to remove human judgment, just to make good intentions repeatable.
 
 ## Start here — two workflows
 
@@ -18,6 +31,10 @@ Paste the relevant guidance into **Claude, ChatGPT, Gemini, or another assistant
 - **Meetup and workshop visuals:** [Inclusive imagery](guidance/inclusive-imagery.md). Review outputs; prompt guidance cannot guarantee representation.
 - **Event pages:** Add [Community safeguards](guidance/community-safeguards.md) to the writing instructions.
 
+### Using the guidance in Claude, ChatGPT, or Gemini
+
+The guidance is plain Markdown, so the portable approach is the same everywhere: paste the files into the conversation (or into a custom-instructions / project / Gem / custom GPT field if your plan has one) before asking for content. Platform differences are *not yet tested by this project*; if you try it, please [open an issue](../../issues) with what worked and what didn't. Known constraints: image generation depends on each tool's image model, and web browsing for reviews depends on your plan and settings.
+
 **Example prompt:**
 
 > Follow the guidance in `guidance/inclusive-writing.md` and `languages/en.md`. Draft a short invitation for a community meetup about OpenTelemetry. Keep it welcoming to people with varied experience, avoid status-based gatekeeping, and flag any missing event accessibility or Code of Conduct details rather than inventing them.
@@ -27,6 +44,8 @@ See [example invitation](examples/event-announcement.md) and [example image prom
 ### REVIEW: flag publicly visible gaps in an event
 
 Start with the [Claude-oriented event-review skill](skills/event-review/SKILL.md) and [checklist](skills/event-review/checklist.md). Provide an event URL or copied public event information and ask for an **evidence-based preliminary review**. If browsing is unavailable, provide source material; never allow the assistant to invent having visited a website.
+
+**Installing the skill (Claude Code):** copy the `skills/event-review/` folder (both `SKILL.md` and `checklist.md`) into `.claude/skills/event-review/` in your project, or `~/.claude/skills/event-review/` for personal use, then ask Claude to review an event. In other Claude surfaces, or any other assistant, paste `SKILL.md` and `checklist.md` into the conversation instead. Skill loading is experimental here and has not yet been tested across surfaces.
 
 Example prompt:
 
@@ -51,6 +70,10 @@ examples/               Copyable illustrative starting points
 references/RESOURCES.md Further reading, acknowledgments, and links
 CONTRIBUTING.md         How to help improve the project
 ```
+
+## Contributing
+
+Real (anonymized) test cases, false positives, Spanish and English language nuance, and better references are all welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Attribution and community
 

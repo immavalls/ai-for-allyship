@@ -1,5 +1,5 @@
 ---
-name: community-event-review
+name: event-review
 description: Review publicly available event materials for discoverable inclusion practices, source evidence, and constructive follow-up questions. Independent, CHAOSS-inspired, no badge or score.
 ---
 
@@ -33,6 +33,6 @@ A user asks to review a meetup, KCD, conference, workshop, or event page for inc
 
 ## Background
 
-The categories are inspired by the published [CHAOSS DEI Event Badging v4.0](https://www.chaoss.community/diversity-and-inclusion-badging/) criteria, which address demographics practices, attendee experience, CoC, access tickets, family friendliness, accessibility, location inclusivity, and public health/safety. The official badge process uses human reviewers; do not reproduce their badge decisions.
+The categories are inspired by the published [CHAOSS DEI Event Badging v4.0](https://www.chaoss.community/diversity-and-inclusion-badging/) criteria, which cover event demographics, inclusive experience at event, code of conduct, diversity access tickets, family friendliness, event accessibility, event location inclusivity, public health and safety, and (for virtual events) time inclusion. The official badge process uses human reviewers; do not reproduce their badge decisions.
 
 See [`checklist.md`](checklist.md).
